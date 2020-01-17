@@ -107,7 +107,7 @@ export default class HelloWorld extends Vue {
   }
   mounted() {
     let list = storage.getItem("todolist");
-    if(list){
+    if(Array.isArray(list)){
       this.list = list;
     }else{
       storage.setItem('todolist',this.list);
